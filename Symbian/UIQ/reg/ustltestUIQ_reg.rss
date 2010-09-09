@@ -1,0 +1,15 @@
+// UIQ 3 Application Registration resource file for USTLtest.
+//
+// Created by Penrillian, Smartphone Software Innovators <http://www.penrillian.com>
+// This file is free software, distributed under the MIT License.
+
+#include <appinfo.rh>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 0xA00009DC
+
+RESOURCE APP_REGISTRATION_INFO
+{
+    app_file="ustltest";
+    localisable_resource_file="\\resource\\apps\\ustltestUIQ_loc";
+}

@@ -1,0 +1,78 @@
+// File: USTLtest.MMP
+// Symbian build command description file for the USTL Test Implementation.
+//
+// Created by Penrillian, Smartphone Software Innovators <http://www.penrillian.com>
+//
+// This file is free software, distributed under the MIT License.
+
+TARGET		ustltest.exe
+TARGETTYPE        exe
+TARGETPATH        \sys\bin
+UID               0x100039CE 0xA00009DC
+
+macro			UIQ3 
+
+CAPABILITY        None
+VENDORID          0
+
+SYSTEMINCLUDE	\epoc32\include \epoc32\include\libc
+SYSTEMINCLUDE   ..\.. 
+USERINCLUDE ..\..
+
+SOURCEPATH	..\..\bvt
+
+//SOURCE bvt13.cpp  // Cin, cout, cerr
+SOURCE SymbianMain.cpp // Replacement for ecrt0.lib
+SOURCE SymbianTest.cpp
+
+/*  For debugging... easier to have all in one package:
+SOURCEPATH	..\..
+
+SOURCE cmemlink.cpp
+SOURCE fdostream.cpp
+SOURCE file.cpp
+SOURCE memblock.cpp
+SOURCE memlink.cpp
+SOURCE mstream.cpp
+SOURCE sistream.cpp
+SOURCE sostream.cpp
+SOURCE ualgobase.cpp
+SOURCE ubitset.cpp
+SOURCE uexception.cpp
+SOURCE unew.cpp
+SOURCE ustdxept.cpp
+SOURCE ustring.cpp
+SOURCE SymbianStringSupport.cpp
+*/
+
+LIBRARY		estlib.lib euser.lib 
+LIBRARY		bafl.lib
+STATICLIBRARY ustl.lib
+// STATICLIBRARY	ecrt0.lib // doesn't exist in beta 3 - wrote it as SymbianMain
+
+// AIF stuff - make the environment see us:
+
+SOURCEPATH		Reg
+
+START RESOURCE	ustltestUIQ_reg.rss
+TARGETPATH		\private\10003a3f\apps
+END
+
+START RESOURCE	ustltestUIQ_loc.rss
+TARGETPATH		\Resource\Apps
+LANG			SC
+END
+
+START BITMAP    UstlTestAppIcon.mbm
+HEADER
+TARGETPATH      \resource\apps
+SOURCEPATH		Reg
+SOURCE          c16 UstlTestUIQ_18x18.bmp
+SOURCE          8   UstlTestUIQ_18x18_mask.bmp
+SOURCE          C16 UstlTestUIQ_40x40.bmp
+SOURCE          8   UstlTestUIQ_40x40_mask.bmp
+SOURCE          C16 UstlTestUIQ_64x64.bmp
+SOURCE          8   UstlTestUIQ_64x64_mask.bmp
+END
+SOURCEPATH ..\..\bvt
+SOURCE bvt00.cpp bvt01.cpp bvt02.cpp bvt03.cpp bvt04.cpp bvt05.cpp bvt06.cpp bvt07.cpp bvt08.cpp bvt09.cpp bvt10.cpp bvt11.cpp bvt12.cpp bvt14.cpp bvt15.cpp bvt16.cpp bvt17.cpp bvt18.cpp bvt19.cpp bvt20.cpp bvt21.cpp bvt22.cpp bvt23.cpp bvt24.cpp bvt25.cpp bvtSymbian.cpp bvtPrintf.cpp

@@ -1,0 +1,21 @@
+// USTL.MMP
+//
+// Compiles the USTL.LIB static library in the appropriate directory.
+//
+// Created by Penrillian, Smartphone Software Innovators <http://www.penrillian.com>
+//
+// This file is free software, distributed under the MIT License.
+
+TARGET		ustl.lib
+TARGETTYPE	lib 
+
+SYSTEMINCLUDE	\epoc32\include \epoc32\include\libc
+SYSTEMINCLUDE   .. 
+USERINCLUDE ..
+
+SOURCEPATH	..
+
+SOURCE cmemlink.cpp fstream.cpp memblock.cpp memlink.cpp mistream.cpp ofstream.cpp sistream.cpp sostream.cpp ualgobase.cpp ubitset.cpp uexception.cpp unew.cpp ustdxept.cpp ustring.cpp SymbianStringSupport.cpp printfsupport.cpp
+
+DOCUMENT documentation.c ustl.h
+

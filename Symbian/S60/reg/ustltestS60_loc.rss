@@ -1,0 +1,36 @@
+// Resource file for USTLTest
+//
+// Created by Penrillian, Smartphone Software Innovators <http://www.penrillian.com>
+// This file is free software, distributed under the MIT License.
+
+#include <eikon.rh>
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <appinfo.rh>
+
+
+
+RESOURCE LOCALISABLE_APP_INFO
+{
+  short_caption = "UstlTest";
+  caption_and_icon =
+   {
+    CAPTION_AND_ICON_INFO
+      {
+      caption = "UstlTest";
+      number_of_icons = 3;
+      icon_file = "\\resource\\apps\\UstlTestAppIcon.mbm";
+      }
+   };
+}
+   
+
+   RESOURCE RSS_SIGNATURE
+	{
+	}
+	
+
+RESOURCE TBUF r_default_document_name
+	{
+	buf="UstTest";
+	}
