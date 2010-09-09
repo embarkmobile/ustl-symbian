@@ -25,6 +25,7 @@ struct numeric_limits {
     static const bool is_signed = false;	///< True if the type is signed.
     static const bool is_integer = false;	///< True if stores an exact value.
     static const bool is_integral = false;	///< True if fixed size and cast-copyable.
+    static const unsigned int digits = 0;
 };
 
 #ifndef DOXYGEN_SHOULD_SKIP_THIS
@@ -36,6 +37,7 @@ struct numeric_limits<T*> {
     static const bool is_signed = false;
     static const bool is_integer = true;
     static const bool is_integral = true;
+    static const unsigned int digits = 0;
 };
 
 #define _NUMERIC_LIMITS(type, minVal, maxVal, bSigned, bInteger, bIntegral)	\
@@ -46,6 +48,7 @@ struct numeric_limits<type> {					\
     static const bool is_signed = bSigned;			\
     static const bool is_integer = bInteger;			\
     static const bool is_integral = bIntegral;			\
+    static const unsigned int digits = sizeof(type)*CHAR_BIT;			\
 }
 
 //--------------------------------------------------------------------------------------

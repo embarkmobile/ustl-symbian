@@ -15,10 +15,11 @@
 #{"UstlTest"}, (0xA00009DC), 1, 0, 0, TYPE=SA
 [0x101F7961], 0, 0, 0, {"Series60ProductID"}
 
-"\Symbian\9.2\S60_3rd_FP1\epoc32\release\gcce\urel\ustltest.exe"-"!:\sys\bin\ustltest.exe"
-"\Symbian\9.2\S60_3rd_FP1\epoc32\data\Z\Resource\Apps\UstlTestAppIcon.mbm"-"!:\resource\apps\UstlTestAppIcon.mbm"
-"\Symbian\9.2\S60_3rd_FP1\epoc32\data\z\resource\apps\ustltestS60_loc.RSC"-"!:\resource\apps\ustltestS60_loc.RSC"
-"\Symbian\9.2\S60_3rd_FP1\epoc32\data\z\private\10003a3f\apps\ustltestS60_reg.rsc"-"!:\private\10003a3f\import\apps\ustltestS60_reg.rsc"
+
+"\S60\devices\S60_3rd_FP2_SDK_v1.1\epoc32\release\gcce\urel\ustltest.exe"-"!:\sys\bin\ustltest.exe"
+;"\S60\devices\S60_3rd_FP2_SDK_v1.1\epoc32\data\Z\Resource\Apps\UstlTestAppIcon.mbm"-"!:\resource\apps\UstlTestAppIcon.mbm"
+"\S60\devices\S60_3rd_FP2_SDK_v1.1\epoc32\data\z\resource\apps\ustltestS60_loc.RSC"-"!:\resource\apps\ustltestS60_loc.RSC"
+"\S60\devices\S60_3rd_FP2_SDK_v1.1\epoc32\data\z\private\10003a3f\apps\ustltestS60_reg.rsc"-"!:\private\10003a3f\import\apps\ustltestS60_reg.rsc"
 
 "..\bvt25.in"-"c:\bvt25.in"
 

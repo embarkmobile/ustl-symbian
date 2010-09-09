@@ -1,0 +1,9 @@
+#ifndef HACKED_CMATH_H_
+#define HACKED_CMATH_H_
+#include <ustl.h>
+#include "math.h"
+#define NAN __builtin_nan("")
+#define INFINITY 1.0/0.0
+float abs(float v);
+
+#endif

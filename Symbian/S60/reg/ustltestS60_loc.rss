@@ -19,7 +19,7 @@ RESOURCE LOCALISABLE_APP_INFO
       {
       caption = "UstlTest";
       number_of_icons = 3;
-      icon_file = "\\resource\\apps\\UstlTestAppIcon.mbm";
+      icon_file = "\\resource\\apps\\UstlTestAppIcon.mif";
       }
    };
 }
