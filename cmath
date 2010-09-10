@@ -2,8 +2,21 @@
 #define HACKED_CMATH_H_
 #include <ustl.h>
 #include "math.h"
-#define NAN __builtin_nan("")
-#define INFINITY 1.0/0.0
+
+
+#ifdef __GCCE__
+#define HUGE_VALF       __builtin_huge_valf()
+#define HUGE_VALL       __builtin_huge_vall()
+#define INFINITY        __builtin_inf()
+#define NAN             __builtin_nan("")
+#else
+#define HUGE_VALF       (float)HUGE_VAL
+#define HUGE_VALL       (long double)HUGE_VAL
+#define INFINITY        HUGE_VALF
+#define NAN             (0.0/0.0)
+#endif
+
 float abs(float v);
+
 
 #endif
