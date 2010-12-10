@@ -161,11 +161,13 @@ public:
     inline void			replace (uoff_t rp, size_type n, const_pointer s)				{ replace (iat(rp), iat(rp + n), string(s)); }
     inline void			replace (uoff_t rp, size_type n, size_type count, value_type c)			{ replace (iat(rp), iat(rp + n), count, c); }
     inline string		substr (uoff_t o, size_type n) const	{ return (string (*this, o, n)); }
+    inline string		substr (uoff_t o) const	{ return (string (*this, o, length() - o)); }
     uoff_t			find (const_reference c, uoff_t pos = 0) const;
     uoff_t			find (const string& s, uoff_t pos = 0) const;
     uoff_t			rfind (const_reference c, uoff_t pos = npos) const;
     uoff_t			rfind (const string& s, uoff_t pos = npos) const;
     uoff_t			find_first_of (const string& s, uoff_t pos = 0) const;
+    uoff_t			find_first_of (char c, uoff_t pos = 0) const;
     uoff_t			find_first_not_of (const string& s, uoff_t pos = 0) const;
     uoff_t			find_last_of (const string& s, uoff_t pos = npos) const;
     uoff_t			find_last_not_of (const string& s, uoff_t pos = npos) const;

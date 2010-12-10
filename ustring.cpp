@@ -318,6 +318,16 @@ uoff_t string::find_first_of (const string& s, uoff_t pos) const
     return (npos);
 }
 
+/// Returns the offset of the first occurence of one of characters in \p s of size \p n after \p pos.
+uoff_t string::find_first_of (char c, uoff_t pos) const
+{
+    for (uoff_t i = min(pos,size()); i < size(); ++ i) {
+		if (c == at(i))
+			return (i);
+    }
+    return (npos);
+}
+
 /// Returns the offset of the first occurence of one of characters not in \p s of size \p n after \p pos.
 uoff_t string::find_first_not_of (const string& s, uoff_t pos) const
 {
